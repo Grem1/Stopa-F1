@@ -1,0 +1,335 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    height: 100vh;
+    
+}
+
+header {
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+nav li {
+    margin: 0;
+}
+
+nav li.brand {
+    margin-right: -250px;
+}
+
+nav li.contact {
+    margin-right: 10px;
+}
+
+nav li.brand img {
+    height: 50px;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+nav li.contact a {
+    color: #ff3333; 
+    font-size: 20px;
+    
+}
+
+main {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    height: calc(100vh - 60px); /* Adjust based on header height */
+}
+
+.left-sidebar, .right-sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 35px;
+    text-align: center;
+}
+
+
+.left-sidebar img, .right-sidebar img {
+    width: 100%;
+    max-width: 180px;
+    margin-bottom: 2px;
+    
+}
+
+.content {
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #fff;
+}
+
+.text-block {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fafafa;
+}
+
+.text-block h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.Novinky {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fafafa;
+}
+
+.Onas {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fafafa;
+}
+
+.Otymu {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fafafa;
+}
+
+.Ojezdci {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fafafa;
+}
+
+.Jezdci{
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+
+.Postaveni {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fafafa;
+}
+
+.DatumyVysledky {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fafafa;
+}
+
+.back-to-top-container {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.back-to-top {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.back-to-top:hover {
+    background-color: #555;
+}
+
+/* Responsive Media Queries */
+
+/* Tablets and smaller desktops */
+@media (max-width: 1024px) {
+    main {
+        grid-template-columns: 150px 1fr 150px;
+        gap: 10px;
+    }
+    
+    .left-sidebar, .right-sidebar {
+        padding: 3px;
+    }
+
+        .left-sidebar{
+        order: 1;
+    }
+
+    .right-sidebar{
+        order: 2;
+    }
+    
+    .left-sidebar img, .right-sidebar img {
+        max-width: 140px;
+    }
+    
+    .content {
+        padding: 15px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+        height: auto;
+        gap: 15px;
+        padding: 10px;
+    }
+    
+    .left-sidebar, .right-sidebar {
+        padding: 8px;
+        max-height: none;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        overflow-y: visible;
+        border-radius: 15px;
+        text-decoration: none;
+    }
+
+    .left-sidebar{
+        order: 1;
+    }
+
+    .right-sidebar{
+        order: 2;
+    }
+    
+    .left-sidebar img, .right-sidebar img {
+        max-width: 220px;
+        margin-bottom: 5px;
+    }
+    
+    .content {
+        padding: 15px;
+        max-height: none;
+        border-radius: 15px;
+    }
+    
+    header {
+        padding: 8px;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+    
+    nav li.brand {
+        margin-right: 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    nav li.contact {
+        margin-left: 0;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+    
+    main {
+        grid-template-columns: 1fr;
+        padding: 5px;
+        margin: 0;
+        gap: 10px;
+    }
+    
+    .left-sidebar, .right-sidebar {
+        padding: 5px;
+        border-radius: 10px;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+    }
+
+        .left-sidebar{
+        order: 1;
+    }
+
+    .right-sidebar{
+        order: 2;
+    }
+    
+    .left-sidebar img, .right-sidebar img {
+        max-width: 200px;
+        margin-bottom: 3px;
+        
+    }
+    
+    .content {
+        padding: 12px;
+        border-radius: 12px;
+    }
+    
+    .content h1 {
+        font-size: 1.4rem;
+        margin-bottom: 8px;
+    }
+    
+    .content h2 {
+        font-size: 1.1rem;
+    }
+    
+    .text-block, .Novinky, .Onas, .Otymu, .Ojezdci, .Postaveni, .DatumyVysledky, .Jezdci {
+        padding: 10px;
+        margin-bottom: 12px;
+        border-radius: 8px;
+    }
+    
+    .back-to-top-container {
+        padding: 15px;
+        margin-top: 15px;
+    }
+    
+    .back-to-top {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+    
+    nav li.brand img {
+        height: 40px;
+    }
+    
+    nav li.contact a {
+        font-size: 20px;
+        
+    }
+}
